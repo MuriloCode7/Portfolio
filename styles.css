@@ -1,0 +1,53 @@
+:root {
+  --primary-color: #3f1f6f;
+  --medium-color: #6532b3;
+  --light-color: #8c45f6;
+}
+
+body {
+  background-color: var(--primary-color);
+  margin: 10%;
+  padding: 0;
+  display: flex;
+  color: white;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  margin-top: 10%;
+}
+
+h1 {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 100;
+  background-color: var(--light-color);
+  margin-left: 30vh;
+  padding: 10px;
+  padding-left: 15vh;
+  border-radius: 20px;
+  box-shadow: 2px 2px 8px 8px rgba(0, 0, 0, 0.4);
+}
+
+.photo {
+  border-radius: 50%;
+  height: 40vh;
+  box-shadow: 2px 2px 8px 8px rgba(0, 0, 0, 0.4);
+  position: absolute;
+}
+
+/* Estilos para telas menores */
+@media screen and (max-width: 768px) {
+  .photo {
+    position: relative;
+  }
+  .header h1 {
+    margin: 0;
+  }
+
+  .header {
+    justify-content: center;
+    align-items: center;
+  }
+}
