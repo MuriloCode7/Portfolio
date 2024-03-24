@@ -1,40 +1,86 @@
 :root {
-  --primary-color: #3f1f6f;
-  --medium-color: #6532b3;
-  --light-color: #8c45f6;
+  --light-color: #3468d8;
+  --medium-color: #366de0;
+  --primary-color: #1b3772;
+  --white: #fffa;
 }
 
 body {
   background-color: var(--primary-color);
-  margin: 10%;
+  margin: 0;
+  height: 100vh;
   padding: 0;
   display: flex;
   color: white;
+  font-family: "Times New Roman", Times, serif;
+  background-image: url(./media/code.jpg);
+  background-size: cover;
 }
 
 .header {
   display: flex;
   align-items: center;
-  margin-top: 10%;
+  height: 40vh;
+  margin-top: 10vh;
+}
+
+h1,
+h2 {
+  font-size: 8vh;
+  background-color: var(--light-color);
+  box-shadow: 2px 2px 8px 8px rgba(0, 0, 0, 0.4);
+  animation: slideTextName 1s forwards;
+}
+
+.textContent {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
 }
 
 h1 {
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
-  font-size: 100;
-  background-color: var(--light-color);
-  margin-left: 30vh;
-  padding: 10px;
-  padding-left: 15vh;
-  border-radius: 20px;
-  box-shadow: 2px 2px 8px 8px rgba(0, 0, 0, 0.4);
+  height: 10vh;
+}
+
+h2 {
+  font-size: 2vh;
+  background-color: var(--white);
+  color: var(--primary-color);
+  animation: slideTextBio 1s forwards;
+}
+
+@keyframes slideTextName {
+  from {
+    width: 0px;
+  }
+  to {
+    width: 50vw;
+  }
+}
+
+@keyframes slideTextBio {
+  from {
+    width: 0px;
+  }
+  to {
+    width: 25vw;
+  }
 }
 
 .photo {
   border-radius: 50%;
   height: 40vh;
   box-shadow: 2px 2px 8px 8px rgba(0, 0, 0, 0.4);
-  position: absolute;
+  animation: slidePhoto 1s forwards;
+}
+
+@keyframes slidePhoto {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(5vw);
+  }
 }
 
 /* Estilos para telas menores */
@@ -49,5 +95,14 @@ h1 {
   .header {
     justify-content: center;
     align-items: center;
+    width: 100%;
+    margin-top: 30vh;
   }
+}
+
+.skills {
+  margin-top: 10vh;
+  width: 100vw;
+  height: 50vh;
+  background-color: rgba(255, 255, 255, 0.5);
 }
